@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Cadastro de Componentes</string>
+    <string name="app_name">PC Control</string>
+    <string name="titulo_cadastro">Cadastro de Componentes</string>
 </resources>
