@@ -7,33 +7,42 @@
     android:layout_height="match_parent"
     tools:context=".cadastro_componentes">
 
+    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="421dp"
-        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="-5dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <!-- EditText para o título -->
     <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="227dp"
-        android:layout_height="32dp"
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="text"
         android:text="Cadastro de Componentes"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="25dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
 
+    <!-- LinearLayout para outros componentes -->
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="665dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="65dp">
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Componentes adicionais aqui -->
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/editTextText4"
@@ -42,15 +51,6 @@
             android:ems="10"
             android:inputType="text"
             android:text="Name" />
-
-        <EditText
-            android:id="@+id/editTextTextMultiLine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
